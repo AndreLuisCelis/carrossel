@@ -1,0 +1,112 @@
+:root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #777;
+    margin-bottom: 70px;
+}
+
+.container {
+    margin: 5px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+.wrapper-carrossel {
+    padding: 0 20px;
+    width: 700px;
+    margin: 0 auto;
+    position: relative;
+    background-color: rgba(50, 50, 50, 50, 0.5);
+}
+
+#btn-left {
+    position: absolute;
+    top: 150px;
+    left: 40px;
+}
+
+#btn-right {
+    position: absolute;
+    top: 150px;
+    right: 40px;
+}
+
+.seta {
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+.seta:hover {
+    filter: brightness(120%);
+}
+
+.seta-left {
+    border-right: 30px solid #777;
+}
+
+.seta-right {
+    border-left: 30px solid #777;
+}
+
+.container-carrossel {
+
+   /*  https://willianjusten.com.br/dica-de-css-scroll-snap */
+
+    scroll-behavior: smooth; /* Faz o scroll se mover lentamente */
+    scroll-snap-type: x mandatory; /* Faz o scroll do carrossel se posicionar em um ponto especifico quando alterado  */
+    width: 500px;
+    margin: 5px auto;
+    display: flex;
+    overflow-x: auto;
+    overflow-x: hidden;
+    scrollbar-width: 1px;
+    box-shadow: 0 0 50px rgb(41, 31, 31);
+}
+
+.box-carrossel {
+    scroll-snap-align: center; /* faz com que a box fique centralizada no container */ 
+    min-width: 300px;
+    height: 300px;
+    border: solid 2px #555;
+    background-color: #CCC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #555;
+    font-size: x-large;
+    margin: 30px 100px;
+    box-shadow: 0 0 100px rgba(41, 31, 31, 0.5);
+}
+
+.box-carrossel::before {
+    content: " Box para imagem";
+}
+
+.box-carrossel p {
+    width: 250px;
+    height: 250px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: dimgrey;
+    border-radius: 50%;
+}
+
+
+
